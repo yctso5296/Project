@@ -90,6 +90,7 @@ imgEncryptX = cv2.bitwise_xor(img1, imgKeyX)
 cv2.imwrite("imgEncryptX.jpg",imgEncryptX)
 
 # save imgKeyX and imgEncryptX obtained to Google Drive (cloud) manually to get file id to facilitate remote file retrieval
+# for real-life cases, the encryption key and encrypted image would be saved automatically to cloud server when images taken by cameras or sensors
 
 # retrieve encryption key from Google Drive (cloud)
 import requests
@@ -192,6 +193,7 @@ with open('imgEncryptDES.enc', 'wb') as f:
     f.write(ciphertext)
 
 # save "imgEncryptDES.enc" obtained to Google Drive (cloud) manually to get file id to facilitate remote file retrieval
+# for real-life cases, the ciphertext would be saved automatically to cloud server when images taken by cameras or sensors
 
 # Decryption function
 # Encryption and Descryption key is same
